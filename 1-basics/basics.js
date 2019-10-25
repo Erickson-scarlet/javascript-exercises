@@ -51,7 +51,7 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-        
+        let someVariable = undefined;
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someVariable).to.equal("undefined");
@@ -70,9 +70,9 @@ describe("basics", function() {
             // new Number() creates a "primitive wrapper". It's not an actual number, it's an object.
             // In 99.999% of all cases, this is a bug and not actually intended. Fix it! :)
             // ✏️ FIX THAT BUG ✏️
-            const someNumber = new Number(3);
+            const someNumber =Number(3);
             ////////////////////////////////////////////////////////////////////
-
+        
             // The primitive wrapper passes the loose quality check because it will be casted to a number.
             expect(someNumber == 3).to.equal(true);
             // But it doesn't pass the strict equality check because an object is not a number.
@@ -90,7 +90,7 @@ describe("basics", function() {
             // ✏️ EDIT NEXT LINE ✏️
             const bigNumber = "...";
             ////////////////////////////////////////////////////////////////////
-
+        
             expect(typeof bigNumber).to.equal("string");
             expect(bigNumber.length).to.equal(3);
             // Number(bigNumber) casts bigNumber from a string to a number
